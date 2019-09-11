@@ -1,3 +1,4 @@
+import { actions } from '../actions';
 
 const defaultState = {
   data: {
@@ -21,6 +22,11 @@ const defaultState = {
 
 export default function productDetails(state = defaultState, action) {
   switch (action.type) {
+    case actions.PRODUCT_DETAILS_TAB_CHANGED:
+      return {
+        ...state,
+        selectedTab: action.payload.selectedTab
+      };
     default:
       return state;
   }

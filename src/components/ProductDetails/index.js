@@ -7,6 +7,8 @@ import Hidden from '@material-ui/core/Hidden';
 import Section from './Section';
 import Navigation from './Navigation';
 import Headline from './Headline';
+import TabHeader from './TabHeader';
+import TabContent from './TabContent';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -22,8 +24,6 @@ const useStyles = makeStyles(theme => ({
 export default function ProductDetails() {
   const classes = useStyles();
   const {
-    description,
-    details,
     price,
     discountPrice,
     variants
@@ -38,10 +38,10 @@ export default function ProductDetails() {
             <Section>
               <Navigation />
               <Headline />
+              <TabHeader />
             </Section>
             <Section>
-              {description}
-              {details}
+              <TabContent />
             {price}
             {discountPrice}
             {JSON.stringify(variants)}

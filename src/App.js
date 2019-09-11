@@ -10,6 +10,11 @@ import { makeStyles } from '@material-ui/core/styles';
 const store = createStore(rootReducer);
 
 const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: '#3f87f5'
+    }
+  },
   typography: {
     h1: {
       fontSize: '2.5rem',
@@ -18,6 +23,28 @@ const theme = createMuiTheme({
     },
     subtitle1: {
       color: '#d1d1d1'
+    },
+    body1: {
+      color: '#646464',
+      lineHeight: 1.7
+    }
+  },
+  overrides: {
+    MuiTabs: {
+      indicator: {
+        height: 4,
+        borderRadius: 2,
+      },
+    },
+    MuiTab: {
+      root: {
+        textTransform: 'uppercase',
+        fontWeight: 'bold'
+      },
+      textColorInherit: {
+        color: '#646464',
+        opacity: 0.4
+      }
     }
   }
 });
