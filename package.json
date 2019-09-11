@@ -33,6 +33,7 @@
     ]
   },
   "devDependencies": {
+    "redux-devtools-extension": "^2.13.8",
     "typescript": "^3.6.2"
   }
 }

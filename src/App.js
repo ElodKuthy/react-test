@@ -6,8 +6,9 @@ import { createMuiTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
 import ProductDetails from './components/ProductDetails';
 import { makeStyles } from '@material-ui/core/styles';
+import { composeWithDevTools } from 'redux-devtools-extension';
 
-const store = createStore(rootReducer);
+const store = createStore(rootReducer, composeWithDevTools());
 
 const theme = createMuiTheme({
   palette: {
@@ -20,9 +21,6 @@ const theme = createMuiTheme({
       fontSize: '2.5rem',
       fontWeight: 'bold',
       color: '#4c4c4c'
-    },
-    subtitle1: {
-      color: '#d1d1d1'
     },
     body1: {
       color: '#646464',

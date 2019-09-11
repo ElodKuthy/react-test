@@ -27,6 +27,11 @@ export default function productDetails(state = defaultState, action) {
         ...state,
         selectedTab: action.payload.selectedTab
       };
+    case actions.PRODUCT_VARIANT_CHANGED:
+      return {
+        ...state,
+        selectedVariant: action.payload.selectedVariant
+      };
     default:
       return state;
   }

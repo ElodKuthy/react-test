@@ -8,7 +8,8 @@ const useStyles = makeStyles(theme => ({
     marginTop: theme.spacing(6)
   },
   subtitle: {
-    marginTop: theme.spacing(1)
+    marginTop: theme.spacing(1),
+    color: '#d1d1d1'
   }
 }));
 

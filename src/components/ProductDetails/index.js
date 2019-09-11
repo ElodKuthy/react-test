@@ -9,6 +9,7 @@ import Headline from './Headline';
 import TabHeader from './TabHeader';
 import TabContent from './TabContent';
 import Price from './Price';
+import ColorSelector from './ColorSelector';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -36,6 +37,7 @@ export default function ProductDetails() {
             <Section>
               <TabContent />
               <Price />
+              <ColorSelector />
             </Section>
             <Section last>
             </Section>
