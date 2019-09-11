@@ -5,6 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Hidden from '@material-ui/core/Hidden';
 import Section from './Section';
+import Navigation from './Navigation';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -36,6 +37,7 @@ export default function ProductDetails() {
       <Grid container>
         <Grid item xs={12} md={6}>
             <Section>
+              <Navigation />
               {name}
               {headline}
             </Section>
