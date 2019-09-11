@@ -11,6 +11,7 @@ import TabContent from './TabContent';
 import Price from './Price';
 import ColorSelector from './ColorSelector';
 import ProductImage from './ProductImage';
+import AddToChartButton from './AddToChartButton';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -44,6 +45,7 @@ export default function ProductDetails() {
               <ColorSelector />
             </Section>
             <Section last>
+              <AddToChartButton />
             </Section>
         </Grid>
         <Hidden smDown>

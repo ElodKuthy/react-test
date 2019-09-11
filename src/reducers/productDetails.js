@@ -18,6 +18,8 @@ const defaultState = {
   },
   selectedTab: 0,
   selectedVariant: 0,
+  isLoading: false,
+  addedToCart: false
 };
 
 export default function productDetails(state = defaultState, action) {
@@ -31,6 +33,17 @@ export default function productDetails(state = defaultState, action) {
       return {
         ...state,
         selectedVariant: action.payload.selectedVariant
+      };
+    case actions.ADD_TO_CART_STARTED:
+      return {
+        ...state,
+        isLoading: true
+      };
+    case actions.ADD_TO_CART_COMPLETED:
+      return {
+        ...state,
+        isLoading: false,
+        addedToCart: true
       };
     default:
       return state;
