@@ -1,5 +1,4 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
@@ -9,6 +8,7 @@ import Navigation from './Navigation';
 import Headline from './Headline';
 import TabHeader from './TabHeader';
 import TabContent from './TabContent';
+import Price from './Price';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -23,13 +23,6 @@ const useStyles = makeStyles(theme => ({
 
 export default function ProductDetails() {
   const classes = useStyles();
-  const {
-    price,
-    discountPrice,
-    variants
-  } = useSelector(state => state.productDetails.data);
-  const selectedTab = useSelector(state => state.productDetails.selectedTab);
-  const selectedVariant = useSelector(state => state.productDetails.selectedVariant);
 
   return (
     <Paper className={classes.root}>
@@ -42,14 +35,9 @@ export default function ProductDetails() {
             </Section>
             <Section>
               <TabContent />
-            {price}
-            {discountPrice}
-            {JSON.stringify(variants)}
-            {selectedTab}
-            {selectedVariant}
+              <Price />
             </Section>
             <Section last>
-
             </Section>
         </Grid>
         <Hidden smDown>
