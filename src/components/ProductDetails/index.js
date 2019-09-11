@@ -10,6 +10,7 @@ import TabHeader from './TabHeader';
 import TabContent from './TabContent';
 import Price from './Price';
 import ColorSelector from './ColorSelector';
+import ProductImage from './ProductImage';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -36,6 +37,9 @@ export default function ProductDetails() {
             </Section>
             <Section>
               <TabContent />
+              <Hidden mdUp>
+                <ProductImage />
+              </Hidden>
               <Price />
               <ColorSelector />
             </Section>
@@ -44,6 +48,7 @@ export default function ProductDetails() {
         </Grid>
         <Hidden smDown>
           <Grid className={classes.leftBorder} item xs={12} md={6}>
+            <ProductImage />
           </Grid>
         </Hidden>
       </Grid>
