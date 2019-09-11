@@ -10,7 +10,16 @@ import { makeStyles } from '@material-ui/core/styles';
 const store = createStore(rootReducer);
 
 const theme = createMuiTheme({
-
+  typography: {
+    h1: {
+      fontSize: '2.5rem',
+      fontWeight: 'bold',
+      color: '#4c4c4c'
+    },
+    subtitle1: {
+      color: '#d1d1d1'
+    }
+  }
 });
 
 const useStyles = makeStyles({
